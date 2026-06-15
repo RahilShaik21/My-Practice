@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position property</title>
+    <style>
+        .box{ margin:5px ;padding:0;
+            height: 50px;width: 50px;
+            background-color:cadetblue;
+        }
+        #first{
+            position: sticky;
+            top:0px;
+        }#second{
+            position: relative;
+            top:10px;
+            left:50px;
+        }#thrid{
+            position:absolute;
+            top: 20px;left: 200px;
+        }#four{
+position: fixed;
+left: 500px;
+        }
+    </style>
+</head>
+<body>
+   
+    <div id="second" class="box">second
+         <div id="first" class="box">first</div>
+    </div>
+    <div id="thrid" class="box">thrid</div>
+    <div id="four" class="box">fourth</div>
+    <div class="box">box</div><div class="box">box</div><div class="box">box</div><div class="box">box</div><div class="box">box</div><div class="box">box</div><div class="box">box</div><div class="box">box</div><div class="box">box</div><div class="box">box</div>
+</body>
+</html>

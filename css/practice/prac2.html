@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .nothing{
+            color: red;
+            background-color: rgba(255,0,0,0.1);
+        }
+        .box{
+            height: 60px;width: 60px;
+        }
+        #box1{background-color: red;}
+        #box2{background-color: blue; visibility:collapse;}
+        #box3{background-color: green;}
+        #icon{
+             height: 60px;width: 60px;
+             background-image: url(Myntra-Logo.jpg);
+             background-size: contain;
+             background-repeat: no-repeat;
+             background-position: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="nothing">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis!</p>
+    </div>
+    <div id="box1" class="box">Box1</div>
+    <div id="box2" class="box">Box2</div>
+    <div id="box3" class="box">Box3</div>
+    <div id="icon"></div>
+</body>
+</html>

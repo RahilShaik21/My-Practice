@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            height: 50px;
+            width: 80px;
+            background-color: blueviolet;
+            border: 2px solid black;
+            border-radius: 20px;
+            /* transition-property: all;
+            transition-duration: 0.5s;
+            transition-timing-function:ease-in-in;
+            transition-delay:0s; */
+            transition: all 1s ease-in-out 0s;
+        }
+        .btn:hover{
+            height: 60px;
+            width:90px;
+            background-color: aquamarine;
+        }
+        .btn:active{
+            height: 70px;
+            width: 90px;
+            background-color: rgb(254, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">
+        clickMe
+    </button>
+</body>
+</html>
