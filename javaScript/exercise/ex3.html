@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practise exercise</title>
+</head>
+<body>
+    <div id="name"></div>
+    <button onclick=" document.querySelector('#res').innerText=`
+        normal price:${cartValue} 
+        gst(18%):${cartValue*gst}  
+        total ammount :${cartValue+(cartValue*gst)}`">see total cart value
+        
+    </button>
+    <div id="res"></div>
+    
+    <script>
+        let name='Rahil';
+        document.querySelector("#name").innerText="my name is "+name;
+        let cartValue=1000;
+        console.log(cartValue);
+        const gst=18/100;
+        let totalValue=cartValue*gst;
+        document.querySelector('#res').innerText=`
+        normal price: 
+         gst(18%):  
+        total ammount :`
+    </script>
+
+</body>
+</html>

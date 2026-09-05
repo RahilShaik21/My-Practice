@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">click Me</button>
+    <script>
+        let sum=function(num1,num2){
+            return num1+num2;
+        }
+        let newSum=sum;
+        console.log(sum(1,2));
+        console.log(newSum(1,2));
+    let sum3=function(num1,num2,num3,sum2Num){
+        let sum1=sum2Num(num1,num2);
+        return sum2Num(sum1,num3);
+    }
+    console.log(sum3(1,2,3,sum));
+
+    let Asum=(num1,num2)=>{
+        return num1+num2;
+    }
+    let square=num=> {return num*num};
+    let sqr= num=>num*num;
+    let sum1=(num1,num2)=>num1+num2;
+    let alarm=()=>console.log('BooM!'+`${new Date()}`);
+    // console.log('alarm set');
+    // setTimeout(alarm,3000);
+    let timerId=setTimeout(()=>console.log('Boom!'),3000);
+    console.log(`Alarm set with TinerId:${timerId}`);
+    clearTimeout(timerId);
+    let IntId=setInterval(alarm,2000);
+    setTimeout(()=>clearInterval(IntId),3000);
+    // clearInterval(IntId);
+
+    //event listener
+    let button=document.querySelector("#btn");
+    let printDate=()=>console.log(`Date:${new Date()}`);
+    button.addEventListener("click",event=>{console.log('oh Hello!');});
+    button.addEventListener("click",printDate);
+    // button.removeEventListener("click",printDate);
+    setTimeout(()=>button.removeEventListener("click",printDate),10000);
+    </script>
+</body>
+</html>

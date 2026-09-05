@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0; padding: 0;
+            text-align: center;
+        }
+        h3{
+            margin-top: 50px 0 15px 0;
+        }
+        button{
+            margin: 15px 0;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h3>Metro bill calculation</h3>
+    <label for="ageVal" class="form">Enter Your Age:</label>
+    <input class="form" id="ageVal" type="int"><br><br>
+    <label for="gender"  class="form">Enter Your gender:</label>
+    <input class="form"  id="gender" type="checkbox" value=""><br>
+    <button onclick="age=document.getElementById('ageVal');
+    gender=document."
+    >Submit</button>
+    <script>
+        let age=8;
+        let gender='female';
+        let discount=0;
+        if(age<=5){
+            discount=100;
+        }
+        else if(age>5 && age<=8){
+            discount=50;
+        }
+        else if(age>=65){
+            discount=70;
+        }
+        else{
+            if(gender==='female'){
+                discount+=50;
+            }
+        }
+        console.log(discount);
+    </script>
+</body>
+</html>

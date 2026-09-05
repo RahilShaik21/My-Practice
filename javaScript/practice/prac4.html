@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="printAge(age)">print</button>
+    <script>
+        let age=12;
+        function printAge(num){
+            console.log(`your age is ${age}`);
+            age++;
+        }
+        age=33;
+        printAge(age);
+        age =11;
+        printAge(age);
+       
+        console.log(getRandomMove());
+        function getRandomMove(){
+            let radmn=Math.random()*9;
+            return radmn;
+        }
+    </script>
+</body>
+</html>

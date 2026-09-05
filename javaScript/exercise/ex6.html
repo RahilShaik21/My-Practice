@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let product1={
+            name:'ralph lourel shirt',
+            price:7500,
+            size:'xl',
+            'delivery-time':'7days',
+        }
+        let product3={
+            name:'ralph lourel polo t-shirt',
+            price:5500,
+            size:'xl',
+            'delivery-time':'7days',
+        }
+        let product2={
+            name:'ralph lourel t-shirt',
+            price:5500,
+            size:'xl',
+            'delivery-time':'7days',
+        }
+        console.log(product1);
+        let prize=product1;
+        console.log(prize);
+        prize.price=7000;
+        console.log(prize);
+        console.log(product1['delivery-time']);
+        let obj={
+            message:'good job',
+            status:'complete',
+        }
+         let {message}=obj;
+         console.log(message);
+isIdentical(product3,product1);
+isIdentical(product3,product2);
+isIdentical(message,product1);
+
+         function isIdentical(a,b){
+            if(typeof(a)!='object'||typeof(b)!='object'){
+                console.warn('parameter paased is not a object');}
+            else{
+                if(a.name===b.name){
+                    console.log('both product name are same');
+                }else
+                {console.log('both product have diff name')}
+                 
+                if(a.price===b.price){
+                    console.log('both product price are same');
+                }else
+                {console.log('both product have diff price')}
+
+                 if(a.size===b.size){
+                    console.log('both product size are same');
+                }
+                else{console.log('both product have diff size')}
+
+                 if(a['delivery-time']===b['delivery-time']){
+                    console.log('both product delivery-time are same');
+                }
+                else{console.log('both product have diff delivery-time')}
+                
+            }
+        }
+    </script>
+</body>
+</html>

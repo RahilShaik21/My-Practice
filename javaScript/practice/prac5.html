@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let product={
+            name:'rahil',
+            age:17, 
+            'pro-age':18,
+            body:{
+                heigth:6,
+                wiegth:80,
+            },
+            calAge: function(){
+                return ++this.age;
+            }
+        };
+        console.log(product);
+        console.log(product.name);
+
+
+        console.log(product.calAge());
+        product.age=17;
+        let userAge='age';
+        // console.log(product.userAge);
+        console.log(product[userAge]);
+         console.log(product);
+        console.log(product['name']);
+        
+
+        delete product.age;
+        console.log(product);
+
+        let str='nothing';
+        console.log(str.toUpperCase());
+        console.log(str.replace('no','N0'));
+
+        let x={num:5};
+        let y=x;
+        console.log(`${x.num} ${y.num}`);
+        x.num=89;
+        console.log(`${x.num} ${y.num}`);
+        let z={n:'sdb'}
+        let a={n:'sdb'}
+        console.log(z ==a);
+        
+        let obj={
+            company:'Mango',
+            itemNAme:'t-shirt',
+            price:1500,
+            size:,
+        }
+        console.log(obj)
+        //destructring
+        let {company}=obj;
+        console.log(company);
+        
+</script>
+</body>
+</html>

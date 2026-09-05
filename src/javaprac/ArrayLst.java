@@ -1,4 +1,4 @@
-package dsa;
+package javaprac;
 
 import java.util.ArrayList;
 import java.util.Arrays;

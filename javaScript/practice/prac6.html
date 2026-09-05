@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>JsoN</title>
+</head>
+<body>
+    <script>
+        let product={
+            name:'Tshirt',
+            price:700,
+            rating:{
+                starts:4.5,
+                noOfReviews:623,
+            },
+        };
+        // console.log(product);
+        // let str=JSON.stringify(product);
+        // console.log(typeof str);
+        // console.log(str);
+        // let newPoduct=JSON.parse(str);
+        // console.log(newPoduct);
+        // console.log(typeof newPoduct);
+        // localStorage.setItem('Name','KG coding');
+        // localStorage.setItem('price','400');
+    //    localStorage.setItem('product',product);
+       localStorage.setItem('product',JSON.stringify(product));
+       console.log(JSON.parse(localStorage.getItem('product')));
+        localStorage.removeItem('price');
+        localStorage.clear();
+    </script>
+</body>
+</html>

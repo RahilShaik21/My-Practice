@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyntraBag</title>
+    <style>
+        *{
+            margin: 0; padding: 0;
+        }
+        .btns{
+            height: 100px;
+        }
+        .bag{
+             position: relative;
+            top: 30px;
+            text-transform: capitalize;
+            width: 150px;
+            height: 40px;
+            background-color: aquamarine;
+            border-radius: 10px;
+        }
+        .wishList{
+            font-size: 15px;
+             position: relative;
+            top: 30px;
+            text-transform: capitalize;
+            width: 200px;
+            height: 45px;
+            background-color: beige;
+            border-radius: 15px; 
+        }
+        .sale{
+             position: relative;
+            top: 30px;
+            text-transform: capitalize;
+            width: 150px;
+            height: 40px;
+            background-color: aquamarine;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="btns">
+        <button class="bag" onclick="bagQuantity+=1;
+        document.querySelector('#dispBag').innerText=`Your bag has ${bagQuantity} items`;">Add to bag</button>
+    <button class="wishList"
+    onclick="bagQuantity-=1;
+        document.querySelector('#dispBag').innerText=`Your bag has ${bagQuantity} items`;"
+        >move to wishlist</button>
+    <button class="sale"
+    onclick="bagQuantity+=2;
+        document.querySelector('#dispBag').innerText=`Your bag has ${bagQuantity} items`;"
+    >add 1+1 Sale item</button>
+    </div>
+    <h1 id="dispBag"></h1>
+    <script>
+        let  bagQuantity=0;
+        document.querySelector('#dispBag').innerText=`Your bag has ${bagQuantity} items`;
+    </script>
+</body>
+</html>

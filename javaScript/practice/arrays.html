@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let myArr=[1,'rahil',true,null,{text:'djhf'}];
+        // console.log(myArr);
+        // console.log(Array.isArray(myArr));
+        // console.log(myArr.length);
+        let arr=[1,2,3,4];
+        console.log(arr);
+        arr.push(3);
+        console.log(arr);
+        let pooped=arr.pop();
+        console.log(arr);
+        console.log('pooped:'+pooped);
+        arr.unshift(8);
+        console.log(arr);
+        arr.shift()
+        console.log(arr);
+        console.log('next');
+         
+        arr.splice(1,2);
+        console.log(arr);
+        arr.unshift(3,5,85,6);
+        console.log(arr);
+        console.log(arr.toString());
+        console.log(arr.sort());
+        console.log(arr.valueOf());
+        let [a,b,c,d,e,f]=arr;
+        console.log(a+''+b+''+c+''+d+''+e+''+f);
+        
+    </script>
+</body>
+</html>

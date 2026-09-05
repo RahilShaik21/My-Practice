@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .reset{
+            margin: 15px;
+            border: none;
+            height:50px;
+            width: 50px;
+            background-color: red;
+        }
+        .btn{
+            margin: 15px;
+            border: none;
+            height:50px;
+            width: 50px;
+        }
+        .js-odd{
+            background-color: blueviolet;
+        }
+        .js-even{
+            background-color: darkgoldenrod;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn " onclick="getCount() " >click</button>
+    <button class="reset" onclick="reset()">reset</button>
+    <h4 class="result"></h4>
+
+    <script>
+        let count=JSON.parse(localStorage.getItem("count"));
+        if(count==undefined){
+            count=0;
+            document.querySelector('.result').innerText=`button clicked: 0 times`
+        }else{
+            count=JSON.parse(localStorage.getItem("count"));
+        }
+        console.log(JSON.parse(localStorage.getItem("count")))
+        // let mydate=new Date();
+        // console.log(mydate.getHours());
+        // let hours=mydate.getHours();
+        // let name='rahil';
+       
+        // greet(hours,name);
+        document.querySelector('.result').innerText=`button clicked:${count} times`
+        function getCount(){
+            count++;
+            updateColor();
+            localStorage.setItem("count",JSON.stringify(count));
+            document.querySelector('.result').innerText=`button clicked:${count} times`
+          }
+          function updateColor(){
+            let button =document.querySelector('.btn')
+             if(count%2==0){
+                button.classList.remove('js-odd');
+                button.classList.add('js-even');
+            }else{
+                 button.classList.remove('js-even');
+                button.classList.add('js-odd');
+          }
+        }
+        
+          function reset(){
+            localStorage.clear();
+            count=0;
+            updateColor();
+            document.querySelector('.result').innerText=`button clicked:${count} times`
+            
+          }
+          
+       updateColor();
+          function greet(hours,name="sir"){
+            if(hours<12){
+                console.log('good morning '+name);
+            }else if(hours<=18){
+                console.log('good afternoon '+name)
+            }else if (hours>18){
+                console.log('good night '+name);
+            }
+        
+        }
+        
+    </script>
+</body>
+</html>

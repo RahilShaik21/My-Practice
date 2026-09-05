@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .c-btn{
+            cursor: pointer;
+            color: white;
+            height: 30px;
+            width: 80px;
+            background-color: red;
+            border:none ;
+            border-radius: 10px;
+        }
+        .size-double{
+            height: 60px;
+            width: 160px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <button class="c-btn" id="btn" >Subscribe</button>
+    <script>
+        let multipy=function(num1,num2){
+            return num1*num2;};
+        console.log(1,2);
+        let multipy3=function(num1,num2,num3,multipy){
+            return multipy(multipy(num1,num2),num3);
+        }
+        console.log(multipy3(1,2,3,multipy));
+         console.log(multipy3(2,2,3,multipy));
+    let button=document.querySelector('.c-btn');
+    button.addEventListener('click',()=>setTimeout(addClass,2000));
+    let addClass=function(){
+        let bttn=document.querySelector('#btn');
+        bttn.classList.add('size-double')};
+    
+    let arr=[1,2,3,4];
+    let sum=0;
+    arr.forEach(num=>sum+=num);
+    console.log(sum);
+    console.log(arr.map((num)=>num*num,));
+
+
+
+    </script>
+    
+</body>
+</html>
